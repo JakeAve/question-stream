@@ -15,7 +15,7 @@ git clone https://github.com/JakeAve/question-stream.git
 The `QuestionStream` constructor takes two parameters. The first parameter is a readline interface. The second parameter is an array of objects. Each object has two nodes called, `question` and `callback`.
 
 ```javascript
-new QuestionStream(readlineInterface, questionsArray);
+new QuestionStream(readlineInterface, [{question: 'How are you liking node.js?', callback: answer => console.log('You responded: ' + answer)}]);
 ```
 
 The `question` node takes in a string, which is used for the question promted to the user. It can be styled with chalk, have emojis or be a function that returns a string.

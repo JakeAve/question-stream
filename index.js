@@ -1,5 +1,5 @@
 class QuestionStream {
-    constructor(rlInterfase, questions) {
+    constructor(rlInterface, questions) {
         this.questions = questions.map(q => q.question);
         this.lastIndex = questions.length - 1;
         this.methodName = "cb";
@@ -8,7 +8,7 @@ class QuestionStream {
             question,
             callback
         }, index) => {
-            const prompt = () => rlInterfase.question(question, answer => {
+            const prompt = () => rlInterface.question(question, answer => {
                 callback(answer, prompt);
                 if (index > 0) this[this.methodName + (index - 1)]();
             });
