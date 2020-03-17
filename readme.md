@@ -1,4 +1,4 @@
-# Question Steam
+# Question Stream
 
 Neatly pass and handle a series readline questions in Node.js with minimal setup.
 
